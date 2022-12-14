@@ -1,5 +1,52 @@
-.clearBtn {
 
+html {
+  min-height: 100%;
+}
+
+body {
+  background: linear-gradient(black, white);
+}
+
+h1 {
+  font-size: 60px;
+  color: white;
+}
+
+header p {
+  font-size: larger;
+  color: white;
+}
+
+.jumbotron {
+  background-color: black;
+  border: dotted red 1px;
+}
+
+.currentDay{
+  color: red;
+}
+
+.above-timeblocks{
+  color: black;
+  text-shadow: 1px 1px 2px red;
+}
+
+.row {
+display: flex;
+justify-content:end;
+}
+
+.time-of-day {
+  color: white;
+  font-weight: bold;
+  font-size: larger;
+  background-color: black;
+  border: dotted red 1px;
+}
+
+#clearBtn {
+display: flex;
+justify-content: center;
 }
 
 .hour {
