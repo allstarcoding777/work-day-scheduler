@@ -26,9 +26,25 @@ header p {
   color: red;
 }
 
+#clearBtn {
+margin-left: 50px;
+}
+
+#clearBtn:hover {
+  background-color: rgb(221, 161, 156);
+}
+
 .above-timeblocks{
   color: black;
   text-shadow: 1px 1px 2px red;
+}
+
+.saveBtn:hover {
+  background-color: rgb(131, 227, 131);
+}
+
+.deleteBtn:hover {
+  background-color: rgb(221, 161, 156);
 }
 
 .row {
@@ -44,9 +60,6 @@ header p {
   border: dotted red 1px;
 }
 
-#clearBtn {
-margin-left: 50px;
-}
 
 .saveBtn i:hover {
   transition: all 0.3s ease-in-out;
