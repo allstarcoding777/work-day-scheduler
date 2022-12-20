@@ -32,8 +32,8 @@ header p {
 }
 
 .row {
-display: flex;
-justify-content:end;
+  display: flex;
+  justify-content:end;
 }
 
 .time-of-day {
@@ -45,27 +45,7 @@ justify-content:end;
 }
 
 #clearBtn {
-display: flex;
-justify-content: center;
-}
-
-.hour {
- 
-}
-
-.past {
- 
-}
-
-.present {
- 
-}
-
-.future {
-
-}
-
-.saveBtn {
+margin-left: 50px;
 }
 
 .saveBtn i:hover {
