@@ -10,7 +10,7 @@ While completing this project, I learned how to use third-party APIs more effect
 
 Click on the the timeblock you would like to type and save information in.
 
-![webpage screenshot](assets/images/)
+![webpage screenshot](assets/images/webpage-screenshot.png)
 
 https://allstarcoding777.github.io/work-day-scheduler/
 
