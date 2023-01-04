@@ -20,8 +20,35 @@ clearBtn.addEventListener("click", function () {
   localStorage.removeItem("input5");
   }, false);
 
+//Color-Coded Timeblocks
+const timeblocks = document.getElementsByClassName("col-8");
+let currentHour = parseInt(moment().format('H'));
+
+Array.from(timeblocks).forEach(row => {
+  let
+    time = row.id,
+    rowHour;
+  if (time) {
+    rowHour = parseInt(time);
+  }
+  if (rowHour) {
+//Assigned Colors
+    if (currentHour === rowHour) {
+      setColor(row, "green");
+    } else if ((currentHour < rowHour) && (currentHour > rowHour - 7)) {
+      setColor(row, "lightgrey");
+    } else if ((currentHour > rowHour) && (currentHour < rowHour + 6)) {
+      setColor(row, "red");
+    } 
+  }
+});
+
+function setColor(element, color) {
+  element.style.backgroundColor = color;
+}
+
 //Save 9am Note
-let input9 = document.querySelector("#input9");
+let input9 = document.querySelector(".input9");
 let saveBtn9 = document.getElementById("saveBtn9");
 let note9Saved = document.querySelector(".note9Saved");
 save9Note();
@@ -32,21 +59,20 @@ function save9Note() {
 saveBtn9.addEventListener("click", function(event) {
     event.preventDefault();
   
-    let input9 = document.querySelector("#input9").value;
+    let input9 = document.querySelector(".input9").value;
     localStorage.setItem("input9", input9);
     save9Note();
   });
 
-
-  //Delete 9am Note
+//Delete 9am Note
   let dele10eBtn9 = document.querySelector('#deleteBtn9');
   deleteBtn9.addEventListener("click", function () {
     localStorage.removeItem("input9");
     input9.value = "";
     }, false);
 
-  //Save 10am Note
-let input10 = document.querySelector("#input10");
+//Save 10am Note
+let input10 = document.querySelector(".input10");
 let saveBtn10 = document.getElementById("saveBtn10");
 let note10Saved = document.querySelector(".note10Saved");
 save10Note();
@@ -57,20 +83,20 @@ function save10Note() {
 saveBtn10.addEventListener("click", function(event) {
     event.preventDefault();
   
-    let input10 = document.querySelector("#input10").value;
+    let input10 = document.querySelector(".input10").value;
     localStorage.setItem("input10", input10);
     save10Note();
   });
 
-  //Delete 10am Note
+//Delete 10am Note
   let deleteBtn10 = document.querySelector('#deleteBtn10');
   deleteBtn10.addEventListener("click", function () {
     localStorage.removeItem("input10");
     input10.value = "";
     }, false);
 
-  //Save 11am Note
-let input11 = document.querySelector("#input11");
+//Save 11am Note
+let input11 = document.querySelector(".input11");
 let saveBtn11 = document.getElementById("saveBtn11");
 let note11Saved = document.querySelector(".note11Saved");
 save11Note();
@@ -81,20 +107,20 @@ function save11Note() {
 saveBtn11.addEventListener("click", function(event) {
     event.preventDefault();
   
-    let input11 = document.querySelector("#input11").value;
+    let input11 = document.querySelector(".input11").value;
     localStorage.setItem("input11", input11);
     save11Note();
   });
 
-  //Delete 11am Note
+//Delete 11am Note
   let deleteBtn11 = document.querySelector('#deleteBtn11');
   deleteBtn11.addEventListener("click", function () {
     localStorage.removeItem("input11");
     input11.value = "";
     }, false);
 
-  //Save 12pm Note
-let input12 = document.querySelector("#input12");
+//Save 12pm Note
+let input12 = document.querySelector(".input12");
 let saveBtn12 = document.getElementById("saveBtn12");
 let note12Saved = document.querySelector(".note12Saved");
 save12Note();
@@ -105,20 +131,20 @@ function save12Note() {
 saveBtn12.addEventListener("click", function(event) {
     event.preventDefault();
   
-    let input12 = document.querySelector("#input12").value;
+    let input12 = document.querySelector(".input12").value;
     localStorage.setItem("input12", input12);
     save12Note();
   });
 
-  //Delete 12pm Note
+//Delete 12pm Note
   let deleteBtn12 = document.querySelector('#deleteBtn12');
   deleteBtn12.addEventListener("click", function () {
     localStorage.removeItem("input12");
     input12.value = "";
     }, false);
 
-  //Save 1pm Note
-let input1 = document.querySelector("#input1");
+//Save 1pm Note
+let input1 = document.querySelector(".input1");
 let saveBtn1 = document.getElementById("saveBtn1");
 let note1Saved = document.querySelector(".note1Saved");
 save1Note();
@@ -129,20 +155,20 @@ function save1Note() {
 saveBtn1.addEventListener("click", function(event) {
     event.preventDefault();
   
-    let input1 = document.querySelector("#input1").value;
+    let input1 = document.querySelector(".input1").value;
     localStorage.setItem("input1", input1);
     save1Note();
   });
 
-  //Delete 1pm Note
+//Delete 1pm Note
   let deleteBtn1 = document.querySelector('#deleteBtn1');
   deleteBtn1.addEventListener("click", function () {
     localStorage.removeItem("input1");
     input1.value = "";
     }, false);
 
-  //Save 2pm Note
-let input2 = document.querySelector("#input2");
+//Save 2pm Note
+let input2 = document.querySelector(".input2");
 let saveBtn2 = document.getElementById("saveBtn2");
 let note2Saved = document.querySelector(".note2Saved");
 save2Note();
@@ -153,20 +179,20 @@ function save2Note() {
 saveBtn2.addEventListener("click", function(event) {
     event.preventDefault();
   
-    let input2 = document.querySelector("#input2").value;
+    let input2 = document.querySelector(".input2").value;
     localStorage.setItem("input2", input2);
     save2Note();
   });
 
-  //Delete 2pm Note
+//Delete 2pm Note
   let deleteBtn2 = document.querySelector('#deleteBtn2');
   deleteBtn2.addEventListener("click", function () {
     localStorage.removeItem("input2");
     input2.value = "";
     }, false);
 
-  //Save 3pm Note
-let input3 = document.querySelector("#input3");
+//Save 3pm Note
+let input3 = document.querySelector(".input3");
 let saveBtn3 = document.getElementById("saveBtn3");
 let note3Saved = document.querySelector(".note3Saved");
 save3Note();
@@ -177,12 +203,12 @@ function save3Note() {
 saveBtn3.addEventListener("click", function(event) {
     event.preventDefault();
   
-    let input3 = document.querySelector("#input3").value;
+    let input3 = document.querySelector(".input3").value;
     localStorage.setItem("input3", input3);
     save3Note();
   });
 
-  //Delete 3pm Note
+//Delete 3pm Note
   let deleteBtn3 = document.querySelector('#deleteBtn3');
   deleteBtn3.addEventListener("click", function () {
     localStorage.removeItem("input3");
@@ -190,7 +216,7 @@ saveBtn3.addEventListener("click", function(event) {
     }, false);
 
 //Save 4pm Note
-let input4 = document.querySelector("#input4");
+let input4 = document.querySelector(".input4");
 let saveBtn4 = document.getElementById("saveBtn4");
 let note4Saved = document.querySelector(".note4Saved");
 save4Note();
@@ -201,12 +227,12 @@ function save4Note() {
 saveBtn4.addEventListener("click", function(event) {
     event.preventDefault();
   
-    let input4 = document.querySelector("#input4").value;
+    let input4 = document.querySelector(".input4").value;
     localStorage.setItem("input4", input4);
     save4Note();
   });
 
-  //Delete 4pm Note
+//Delete 4pm Note
   let deleteBtn4 = document.querySelector('#deleteBtn4');
   deleteBtn4.addEventListener("click", function () {
     localStorage.removeItem("input4");
@@ -214,7 +240,7 @@ saveBtn4.addEventListener("click", function(event) {
     }, false);
 
 //Save 5pm Note
-let input5 = document.querySelector("#input5");
+let input5 = document.querySelector(".input5");
 let saveBtn5 = document.getElementById("saveBtn5");
 let note5Saved = document.querySelector(".note5Saved");
 save5Note();
@@ -225,12 +251,12 @@ function save5Note() {
 saveBtn5.addEventListener("click", function(event) {
     event.preventDefault();
   
-    let input5 = document.querySelector("#input5").value;
+    let input5 = document.querySelector(".input5").value;
     localStorage.setItem("input5", input5);
     save5Note();
   });
 
-  //Delete 5pm Note
+//Delete 5pm Note
   let deleteBtn5 = document.querySelector('#deleteBtn5');
   deleteBtn5.addEventListener("click", function () {
     localStorage.removeItem("input5");
