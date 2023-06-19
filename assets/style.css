@@ -60,7 +60,30 @@ margin-left: 50px;
   border: dotted red 1px;
 }
 
-
 .saveBtn i:hover {
   transition: all 0.3s ease-in-out;
+}
+
+/* mobile responsive */
+@media screen and (max-width: 600px) {
+  header {
+    font-size: smaller;
+  }
+  .container {
+    display: table-row-group;
+  }
+  .saveBtn, .deleteBtn {
+    padding: 0px;
+  }
+  .row {
+      margin: 0px;
+      padding: 0px;
+  }
+  #clearBtn {
+    margin-left:15px;
+    margin-bottom: 20px;
+  }
+  .above-timeblocks {
+    visibility: hidden;
+  }
 }
